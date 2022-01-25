@@ -26,7 +26,7 @@ var util = require('util');
   we specify that in the exports of this module that 'hello' maps to the function named 'hello'
  */
 module.exports = {
-  hello: hello,
+  hello: hello, there
 };
 
 /*
@@ -38,7 +38,7 @@ module.exports = {
 function hello(req, res) {
   // variables defined in the Swagger document can be referenced using req.swagger.params.{parameter_name}
   var name = req.swagger.params.name.value || 'stranger';
-  var helloname = util.format('Hello, %s!', name);
+  var helloname = util.format('Hello there, %s!', name);
 
   // this sends back a JSON response which is a single string
   res.json(helloname);
